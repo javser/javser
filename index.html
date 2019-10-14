@@ -5,5 +5,46 @@
 </head>
 <body>
 <h1>he11o github</h1>
+<button id="btn">button</button>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC3duYEYFoC5Op05-_Y_qXmzPMgB2sBy3A",
+    authDomain: "javser-github.firebaseapp.com",
+    databaseURL: "https://javser-github.firebaseio.com",
+    projectId: "javser-github",
+    storageBucket: "javser-github.appspot.com",
+    messagingSenderId: "177962362223",
+    appId: "1:177962362223:web:4ec4039f027893144cb49a",
+    measurementId: "G-3ZW4V3XLDK"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script>
+function save(val) {
+var obj={data:val};
+firebase.database().ref('testing').push().set(obj)
+.then(function(snapshot){alert('success')})
+.cath(function(err){alert('err:'+err)})
+}
+var count=0;
+btn.onclick=function(){
+if (count==10) {
+save('test');
+};
+count>10?count=0:count==5?alert(5):null;
+count++
+};
+</script>
 </body>
 </html>
