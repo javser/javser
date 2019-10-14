@@ -20,28 +20,22 @@
     apiKey: "AIzaSyC3duYEYFoC5Op05-_Y_qXmzPMgB2sBy3A",
     authDomain: "javser-github.firebaseapp.com",
     databaseURL: "https://javser-github.firebaseio.com",
-    projectId: "javser-github",
     storageBucket: "javser-github.appspot.com",
-    messagingSenderId: "177962362223",
-    appId: "1:177962362223:web:4ec4039f027893144cb49a",
-    measurementId: "G-3ZW4V3XLDK"
+ 
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
 <script>
-function save(val) {
+function _save(val) {
 var obj={data:val};
 firebase.database().ref('testing').push().set(obj)
-.then(function(snapshot){alert('success')})
-.cath(function(err){alert('err:'+err)})
+.then(function(snapshot){alert('success')},function(err){alert('err:'+err)})
 }
 var count=0;
 btn.onclick=function(){
-if (count==10) {
-save('test');
-};
+if (count==10) {_save('test');};
 count>10?count=0:count==5?alert(5):null;
 count++
 };
