@@ -1,3 +1,3 @@
 try{
-alert(70);
+alert(70);p()
 }catch(e){alert(e)}
