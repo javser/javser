@@ -1,9 +1,7 @@
 try{
 with(document){
-var dlc=function(){
-alert(7);
-//removeEventListener("DOMContentLoaded", dlc,false);
-};
-addEventListener("DOMContentLoaded", dlc,false);
+addEventListener("DOMContentLoaded", function(){
+body.InnerHTML+="<h3>title</h3>"
+});
 }
 }catch(e){alert(e)}
