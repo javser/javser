@@ -46,6 +46,10 @@ count>10?count=0:count==5?alert(5):null;
 count++
 };
 </script>
-<script src="/main.js"></script>
+<script src="/main.js">
+var s=document.createElement('script');
+s.src="/main.js?p="+Math.rnd()*100;
+document.body.appendChild(s);
+</script>
 </body>
 </html>
