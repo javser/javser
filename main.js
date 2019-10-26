@@ -1,1 +1,2 @@
-alert(76);
+alert(Math.random()*100);
+
