@@ -1,7 +1,7 @@
 try{
-with(document){
-addEventListener("DOMContentLoaded", function(){
-body.InnerHTML+="<h3>title</h3>"
+
+document.addEventListener("DOMContentLoaded", function(){
+document.body.innerHTML+="<h3>title</h3>"
 });
-}
+
 }catch(e){alert(e)}
