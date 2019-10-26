@@ -1,3 +1,4 @@
+alert(70);
 with(document) {
  function dcl() {
   alert(9);
