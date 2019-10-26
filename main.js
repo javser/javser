@@ -2,7 +2,7 @@ try{
 with(document){
 var dlc=function(){
 alert(7);
-removeEventListener("DOMContentLoaded", dlc,false);
+//removeEventListener("DOMContentLoaded", dlc,false);
 };
 addEventListener("DOMContentLoaded", dlc,false);
 }
