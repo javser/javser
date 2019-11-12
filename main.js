@@ -3,7 +3,7 @@ alert(61);
 
 var bt = document.createElement('button');
 bt.textContent = 'install';
-bt.onclick = install();
+bt.onclick = install;
 document.body.appendChild(bt);
 
 let deferredPrompt = null;
