@@ -4,7 +4,7 @@ alert(61);
 var bt = document.createElement('button');
 bt.textContent = 'install';
 bt.onclick = install();
-document.body.appendchild(bt);
+document.body.appendChild(bt);
 
 let deferredPrompt = null;
 
