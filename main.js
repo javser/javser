@@ -18,13 +18,13 @@ window.addEventListener('beforeinstallprompt', (e) => {
 async function install() {
   if (deferredPrompt) {
     deferredPrompt.prompt();
-    console.log(deferredPrompt)
+    alert(deferredPrompt)
     deferredPrompt.userChoice.then(function(choiceResult){
 
       if (choiceResult.outcome === 'accepted') {
-      console.log('Your PWA has been installed');
+      alert('Your PWA has been installed');
     } else {
-      console.log('User chose to not install your PWA');
+      alert('User chose to not install your PWA');
     }
 
     deferredPrompt = null;
@@ -32,5 +32,25 @@ async function install() {
     });
 
 
+  }
+}
+
+// This is the "Offline page" service worker
+
+// Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+
+// Check compatibility for the browser we're running this in
+if ("serviceWorker" in navigator) {
+  if (navigator.serviceWorker.controller) {
+    alert("[PWA Builder] active service worker found, no need to register");
+  } else {
+    // Register the service worker
+    navigator.serviceWorker
+      .register("sw.js", {
+        scope: "./"
+      })
+      .then(function (reg) {
+        alert("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+      });
   }
 }
