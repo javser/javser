@@ -13,8 +13,10 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/?source=pwa",
+  "start_url": "https://javser.github.io/index.html?source=pwa",
   "background_color": "#3367D6",
   "display": "standalone",
-  "theme_color": "#3367D6"
+  "theme_color": "#3367D6",
+  "lang":"",
+  "orientation":"portrait"
 }
