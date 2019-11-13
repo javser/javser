@@ -1,5 +1,5 @@
 var ra= document.createElement('p');
-ra.textContent=(Math.random()*100)+'\n';
+ra.textContent=(Math.random()*100)+'\n\r';
 document.body.insertBefore(ra,null);
 
 var bt = document.createElement('button');
@@ -23,9 +23,9 @@ async function install() {
     deferredPrompt.userChoice.then(function(choiceResult){
 
       if (choiceResult.outcome === 'accepted') {
-      ra.textContent+=('Your PWA has been installed\n');
+      ra.textContent+=('Your PWA has been installed\n\r');
     } else {
-      ra.textContent+=('User chose to not install your PWA\n');
+      ra.textContent+=('User chose to not install your PWA\n\r');
     }
 
     deferredPrompt = null;
@@ -43,7 +43,7 @@ async function install() {
 // Check compatibility for the browser we're running this in
 if ("serviceWorker" in navigator) {
   if (navigator.serviceWorker.controller) {
-    ra.textContent+=("[PWA Builder] active service worker found, no need to register\n");
+    ra.textContent+=("[PWA Builder] active service worker found, no need to register\n\r");
   } else {
     // Register the service worker
     navigator.serviceWorker
@@ -51,7 +51,7 @@ if ("serviceWorker" in navigator) {
         scope: "./"
       })
       .then(function (reg) {
-        ra.textContent+=("[PWA Builder] Service worker has been registered for scope: " + reg.scope)+'\n';
+        ra.textContent+=("[PWA Builder] Service worker has been registered for scope: " + reg.scope)+'\n\r';
       });
   }
 }
