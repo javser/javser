@@ -52,7 +52,10 @@ s.src="/main.js?p="+(Math.random()*100);
 document.body.appendChild(s);
 </script>
 <script>
-     
+    var ra= document.createElement('p');
+ra.textContent=(Math.random()*100)+'\n\r';
+document.body.insertBefore(ra,null);
+ 
 
 // This is the "Offline page" service worker
 
