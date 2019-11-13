@@ -1,6 +1,3 @@
-var ra= document.createElement('p');
-ra.textContent=(Math.random()*100)+'\n\r';
-document.body.insertBefore(ra,null);
 
 var bt = document.createElement('button');
 bt.textContent = 'install';
