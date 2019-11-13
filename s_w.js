@@ -1,1 +1,1 @@
-importScripts('https://javser.github.io/_sw.js?p='+(+new Date));
+importScripts('https://javser.github.io/sw1.js?p='+(+new Date));
